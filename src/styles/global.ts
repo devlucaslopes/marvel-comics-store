@@ -27,5 +27,15 @@ export const GlobalStyles = createGlobalStyle`
     h6 {
       font-family: ${theme.fonts.titleFamily};
     }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: ${theme.fonts.sizes.body};
+      color: ${theme.colors.white};
+    }
   `}
 `
