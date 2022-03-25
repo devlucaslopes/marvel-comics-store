@@ -1,6 +1,6 @@
 export const theme = {
   grid: {
-    container: '14rem'
+    container: '140rem'
   },
   colors: {
     primary: {
