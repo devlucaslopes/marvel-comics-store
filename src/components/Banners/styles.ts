@@ -69,6 +69,10 @@ export const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        ${media.greaterThan('medium')`
+          max-width: 57rem;
+        `}
       }
     }
   `}
@@ -77,6 +81,10 @@ export const Wrapper = styled.div`
 export const Subtitle = styled.h2`
   ${({ theme }) => css`
     font-size: ${theme.fonts.sizes.h6};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.fonts.sizes.h4};
+    `}
   `}
 `
 
@@ -84,5 +92,13 @@ export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.fonts.sizes.h5};
     margin-top: ${theme.spacings.medium};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.fonts.sizes.h3};
+    `}
+
+    ${media.greaterThan('large')`
+      font-size: ${theme.fonts.sizes.h2};
+    `}
   `}
 `
