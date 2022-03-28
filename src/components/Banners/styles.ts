@@ -62,7 +62,7 @@ export const Wrapper = styled.div`
       }
 
       ${ContainerStyles.Wrapper} {
-        max-width: 23rem;
+        max-width: 24rem;
         margin: 0;
         height: 100%;
 
@@ -71,7 +71,7 @@ export const Wrapper = styled.div`
         justify-content: center;
 
         ${media.greaterThan('medium')`
-          max-width: 57rem;
+          max-width: 56rem;
         `}
       }
     }
@@ -91,7 +91,7 @@ export const Subtitle = styled.h2`
 export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.fonts.sizes.h5};
-    margin-top: ${theme.spacings.medium};
+    margin: ${theme.spacings.medium} 0;
 
     ${media.greaterThan('medium')`
       font-size: ${theme.fonts.sizes.h3};
@@ -100,5 +100,13 @@ export const Title = styled.h1`
     ${media.greaterThan('large')`
       font-size: ${theme.fonts.sizes.h2};
     `}
+  `}
+`
+
+export const ButtonWrapper = styled.div`
+  max-width: 12rem;
+
+  ${media.greaterThan('medium')`
+    max-width: 28rem;
   `}
 `

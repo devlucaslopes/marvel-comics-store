@@ -3,8 +3,9 @@ import { Pagination } from 'swiper'
 import 'swiper/css'
 
 import { Container } from '../Container'
+import { Button } from '../Button'
 
-import { Subtitle, Title, Wrapper } from './styles'
+import { Subtitle, Title, Wrapper, ButtonWrapper } from './styles'
 
 export const Banners = () => {
   const pagination = {
@@ -32,6 +33,9 @@ export const Banners = () => {
           <Container>
             <Subtitle>INFINITY COMICS</Subtitle>
             <Title>READ THE FIRST ISSUE OF &quot;ALLIGATOR LOKI&quot;</Title>
+            <ButtonWrapper>
+              <Button>Ler mais</Button>
+            </ButtonWrapper>
           </Container>
         </SwiperSlide>
 
