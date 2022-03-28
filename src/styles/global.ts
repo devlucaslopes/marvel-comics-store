@@ -38,5 +38,10 @@ export const GlobalStyles = createGlobalStyle`
       font-size: ${theme.fonts.sizes.body};
       color: ${theme.colors.white};
     }
+
+    button {
+      cursor: pointer;
+      border: 0;
+    }
   `}
 `
