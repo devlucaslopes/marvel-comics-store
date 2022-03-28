@@ -1,9 +1,40 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 import * as ContainerStyles from '../Container/styles'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    .swiper-pagination {
+      position: absolute;
+      bottom: ${theme.spacings.large};
+      z-index: ${theme.layers.alwaysOnTop};
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: ${theme.spacings.small};
+    }
+
+    .swiper-pagination-bullet {
+      width: 3.2rem;
+      height: 0.8rem;
+      background-color: ${theme.colors.primary['100']};
+      color: ${theme.colors.primary['100']};
+      font-size: 1px;
+      padding-left: 1px;
+
+      ${media.greaterThan('medium')`
+        width: 6.4rem;
+        height: 1.6rem;
+      `}
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: ${theme.colors.secondary['500']};
+      color: ${theme.colors.secondary['500']};
+    }
+
     .swiper-slide {
       position: relative;
       height: 56.25vw;
