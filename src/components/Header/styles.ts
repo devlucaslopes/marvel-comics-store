@@ -5,7 +5,7 @@ import * as ContainerStyles from '../Container/styles'
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
-    height: 8rem;
+    height: ${theme.menuHeight};
     display: flex;
     align-items: center;
     justify-content: space-between;
