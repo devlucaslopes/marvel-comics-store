@@ -26,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     h5,
     h6 {
       font-family: ${theme.fonts.titleFamily};
+      font-weight: 700;
     }
 
     ul {
