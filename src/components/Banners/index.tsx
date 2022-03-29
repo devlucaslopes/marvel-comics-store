@@ -31,11 +31,13 @@ export const Banners = () => {
           />
 
           <Container>
-            <Subtitle>INFINITY COMICS</Subtitle>
-            <Title>READ THE FIRST ISSUE OF &quot;ALLIGATOR LOKI&quot;</Title>
-            <ButtonWrapper>
-              <Button>Ler mais</Button>
-            </ButtonWrapper>
+            <div>
+              <Subtitle>INFINITY COMICS</Subtitle>
+              <Title>READ THE FIRST ISSUE OF &quot;ALLIGATOR LOKI&quot;</Title>
+              <ButtonWrapper>
+                <Button>Ler mais</Button>
+              </ButtonWrapper>
+            </div>
           </Container>
         </SwiperSlide>
 

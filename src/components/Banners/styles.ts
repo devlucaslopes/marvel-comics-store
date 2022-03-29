@@ -62,17 +62,19 @@ export const Wrapper = styled.div`
       }
 
       ${ContainerStyles.Wrapper} {
-        max-width: 24rem;
-        margin: 0;
-        height: 100%;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 100%;
 
-        ${media.greaterThan('medium')`
+        > div {
+          max-width: 24rem;
+          margin: 0;
+
+          ${media.greaterThan('medium')`
           max-width: 56rem;
         `}
+        }
       }
     }
   `}
