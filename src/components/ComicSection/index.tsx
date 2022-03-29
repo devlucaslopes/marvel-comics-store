@@ -1,4 +1,5 @@
 import { Container } from '../Container'
+import { ComicSlider } from '../ComicSlider'
 
 import { Title, Wrapper } from './styles'
 
@@ -27,7 +28,8 @@ export const ComicSection = () => (
         </svg>
         Novidades
       </Title>
-      <div>Lista</div>
+
+      <ComicSlider />
     </Container>
   </Wrapper>
 )
