@@ -41,7 +41,7 @@ const btnModifiers = {
     border: 2px solid ${theme.colors.white};
     background: transparent;
     color: ${theme.colors.white};
-    transition: 0.7s ease;
+    transition: color 0.7s ease;
 
     &:hover {
       color: ${theme.colors.primary['400']};
