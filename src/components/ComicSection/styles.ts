@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
@@ -27,10 +28,14 @@ export const Title = styled.h4`
     > svg {
       height: 0.8rem;
       position: absolute;
-      left: -6.4rem;
+      left: -5.4rem;
       fill-opacity: 0;
 
       animation: ${fadeIn} 0.7s ease forwards;
     }
+
+    ${media.greaterThan('large')`
+      font-size: ${theme.fonts.sizes.h3};
+    `}
   `}
 `
