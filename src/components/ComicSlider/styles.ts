@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -22,6 +23,15 @@ export const Wrapper = styled.div`
         font-weight: 500;
         margin: ${theme.spacings.small} 0;
       }
+
+      ${media.greaterThan('medium')`
+          max-width: 26rem;
+          min-height: 64rem;
+
+          > img {
+            min-height: 32rem;
+          }
+      `}
     }
   `}
 `
