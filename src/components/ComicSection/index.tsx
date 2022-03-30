@@ -3,7 +3,11 @@ import { ComicSlider } from '../ComicSlider'
 
 import { Title, Wrapper } from './styles'
 
-export const ComicSection = () => (
+type ComicSectionProps = {
+  title: string
+}
+
+export const ComicSection = ({ title }: ComicSectionProps) => (
   <Wrapper>
     <Container>
       <Title>
@@ -26,7 +30,7 @@ export const ComicSection = () => (
             </linearGradient>
           </defs>
         </svg>
-        Novidades
+        {title}
       </Title>
 
       <ComicSlider />

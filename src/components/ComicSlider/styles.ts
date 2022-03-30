@@ -26,7 +26,6 @@ export const Wrapper = styled.div`
 
       ${media.greaterThan('medium')`
           max-width: 26rem;
-          min-height: 64rem;
 
           > img {
             min-height: 32rem;

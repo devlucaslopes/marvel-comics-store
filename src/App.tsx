@@ -7,7 +7,9 @@ export const App = () => {
     <>
       <Header />
       <Banners />
-      <ComicSection />
+      <ComicSection title="Novidades" />
+      <ComicSection title="Mais vendidos" />
+      <ComicSection title="Queridinhos da galera" />
     </>
   )
 }
