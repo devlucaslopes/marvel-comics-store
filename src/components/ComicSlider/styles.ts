@@ -11,26 +11,41 @@ export const Wrapper = styled.div`
       height: 100%;
       min-height: 24rem;
 
-      > img {
-        width: 100%;
-        height: 100%;
-        min-height: 18rem;
-        object-fit: cover;
-      }
-
-      strong {
-        display: block;
-        font-weight: 500;
-        margin: ${theme.spacings.small} 0;
-      }
-
       ${media.greaterThan('medium')`
           max-width: 26rem;
-
-          > img {
-            min-height: 32rem;
-          }
       `}
     }
+  `}
+`
+
+type ComicItemProps = {
+  isRare?: boolean
+}
+
+export const ComicItem = styled.div<ComicItemProps>`
+  ${({ theme, isRare = false }) => css`
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 18rem;
+      object-fit: cover;
+      border: ${isRare ? `2px solid ${theme.colors.highlight}` : 'none'};
+    }
+
+    strong {
+      display: block;
+      font-weight: 500;
+      margin: ${theme.spacings.small} 0;
+    }
+
+    color: ${isRare ? theme.colors.highlight : theme.colors.white};
+
+    ${media.greaterThan('medium')`
+      img {
+        min-height: 32rem;
+      }
+    `}
   `}
 `
