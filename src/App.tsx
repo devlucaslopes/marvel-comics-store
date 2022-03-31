@@ -1,16 +1,18 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+
 import { Header } from './components/Header'
-import { Banners } from './components/Banners'
-import { ComicSection } from './components/ComicSection'
+import { Home } from './pages/Home'
+import { Comic } from './pages/Comic'
 
 export const App = () => {
   return (
-    <>
+    <Router>
       <Header />
-      <Banners />
-      <ComicSection title="Novidades" />
-      <ComicSection title="Mais vendidos" />
-      <ComicSection title="Queridinhos da galera" />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:slug" element={<Comic />} />
+      </Routes>
+    </Router>
   )
 }
 
