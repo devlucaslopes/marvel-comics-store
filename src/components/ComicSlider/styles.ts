@@ -25,6 +25,7 @@ type ComicItemProps = {
 export const ComicItem = styled.div<ComicItemProps>`
   ${({ theme, isRare = false }) => css`
     width: 100%;
+    cursor: pointer;
 
     img {
       width: 100%;
@@ -41,6 +42,12 @@ export const ComicItem = styled.div<ComicItemProps>`
     }
 
     color: ${isRare ? theme.colors.highlight : theme.colors.white};
+
+    &:hover {
+      img {
+        filter: brightness(0.7);
+      }
+    }
 
     ${media.greaterThan('medium')`
       img {
