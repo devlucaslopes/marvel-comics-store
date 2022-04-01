@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import { Link } from 'react-router-dom'
 
 import * as ContainerStyles from '../Container/styles'
 
@@ -24,7 +25,7 @@ export const Wrapper = styled.header`
   `}
 `
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(Link)`
   svg {
     width: 10rem;
     height: 8rem;

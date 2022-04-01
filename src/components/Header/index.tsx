@@ -12,7 +12,7 @@ export const Header = () => {
       <Container>
         <FiMenu size={18} className="mobile-menu-icon" />
 
-        <LogoWrapper>
+        <LogoWrapper to="/">
           <Logo />
         </LogoWrapper>
 
