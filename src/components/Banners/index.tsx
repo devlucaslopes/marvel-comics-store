@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
 import 'swiper/css'
+import { Tween } from 'react-gsap'
 
 import { Container } from '../Container'
 import { Button } from '../Button'
@@ -32,11 +33,22 @@ export const Banners = () => {
 
           <Container>
             <div>
-              <Subtitle>INFINITY COMICS</Subtitle>
-              <Title>READ THE FIRST ISSUE OF &quot;ALLIGATOR LOKI&quot;</Title>
-              <ButtonWrapper>
-                <Button>Ler mais</Button>
-              </ButtonWrapper>
+              <Tween
+                from={{ x: '-200px', opacity: 0 }}
+                to={{ x: '0', opacity: 1 }}
+                duration={1}
+                delay={2}
+                ease="back.out(1.7)"
+              >
+                <Subtitle>INFINITY COMICS</Subtitle>
+
+                <Title>
+                  READ THE FIRST ISSUE OF &quot;ALLIGATOR LOKI&quot;
+                </Title>
+                <ButtonWrapper>
+                  <Button>Ler mais</Button>
+                </ButtonWrapper>
+              </Tween>
             </div>
           </Container>
         </SwiperSlide>
