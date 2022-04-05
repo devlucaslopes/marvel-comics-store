@@ -32,7 +32,7 @@ export const Comic = () => {
               <Description>
                 <h2>{comic.title}</h2>
                 <p dangerouslySetInnerHTML={{ __html: comic.description }} />
-                <span>Published at March 16, 2022</span>
+                <span>Published at {comic.published}</span>
                 <Button variant="filled">Add to cart</Button>
               </Description>
             </Container>
@@ -41,7 +41,7 @@ export const Comic = () => {
             <Container>
               <h2>Summary</h2>
               <p dangerouslySetInnerHTML={{ __html: comic.description }} />
-              <span>Published at March 16, 2022</span>
+              <span>Published at {comic.published}</span>
             </Container>
           </MobileDescription>
         </>
