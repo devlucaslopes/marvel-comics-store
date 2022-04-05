@@ -1,16 +1,12 @@
-import { useState } from 'react'
 import { FiShoppingCart } from 'react-icons/fi'
 
+import { useCart } from '../../hooks/useCart'
 import { Cart } from '../Cart'
 
 import { Button } from './styles'
 
 export const CartButton = () => {
-  const [cartIsOpen, setCartIsOpen] = useState(false)
-
-  const handleOpenCart = () => {
-    setCartIsOpen(true)
-  }
+  const { cartIsOpen, handleOpenCart } = useCart()
 
   return (
     <>
@@ -18,7 +14,7 @@ export const CartButton = () => {
         <FiShoppingCart size={18} />
       </Button>
 
-      {cartIsOpen && <Cart onClose={() => setCartIsOpen(!cartIsOpen)} />}
+      {cartIsOpen && <Cart />}
     </>
   )
 }

@@ -13,6 +13,7 @@ const CartProvider = ({ children }: CartProviderProps) => {
   const [bestSellers, setBestSellers] = useState<ComicData[]>([])
   const [favorites, setFavorites] = useState<ComicData[]>([])
   const [items, setItems] = useState<ComicData[]>([])
+  const [cartIsOpen, setCartIsOpen] = useState(false)
 
   useEffect(() => {
     setIsLoading(true)
@@ -38,6 +39,10 @@ const CartProvider = ({ children }: CartProviderProps) => {
     setItems([...items, item])
   }
 
+  const handleOpenCart = () => {
+    setCartIsOpen(!cartIsOpen)
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -47,7 +52,9 @@ const CartProvider = ({ children }: CartProviderProps) => {
         bestSellers,
         favorites,
         isLoading,
-        handleAddItemToCart
+        cartIsOpen,
+        handleAddItemToCart,
+        handleOpenCart
       }}
     >
       {children}

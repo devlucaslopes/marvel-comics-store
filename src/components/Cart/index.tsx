@@ -12,12 +12,8 @@ import {
   FormDiscount
 } from './styles'
 
-type CartProps = {
-  onClose: () => void
-}
-
-export const Cart = ({ onClose }: CartProps) => {
-  const { items } = useCart()
+export const Cart = () => {
+  const { items, handleOpenCart } = useCart()
 
   return (
     <Wrapper>
@@ -25,7 +21,7 @@ export const Cart = ({ onClose }: CartProps) => {
         <Header>
           <h4>My Cart</h4>
 
-          <button onClick={onClose}>
+          <button onClick={handleOpenCart}>
             <FiX size={24} />
           </button>
         </Header>
