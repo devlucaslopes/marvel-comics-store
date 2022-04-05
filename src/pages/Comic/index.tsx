@@ -11,17 +11,17 @@ import { Background, Description, MobileDescription } from './styles'
 
 export const Comic = () => {
   const { slug } = useParams()
-  const { comics } = useCart()
+  const { comics, isLoading, handleAddItemToCart } = useCart()
 
   const [comic, setComic] = useState<ComicData | undefined>(undefined)
 
   useEffect(() => {
     setComic(comics.find((item) => item.slug === slug))
-  }, [])
+  }, [comics])
 
   return (
     <>
-      {comic && (
+      {!isLoading && comic && (
         <>
           <Background src={comic.cover}>
             <Container>
@@ -33,7 +33,12 @@ export const Comic = () => {
                 <h2>{comic.title}</h2>
                 <p dangerouslySetInnerHTML={{ __html: comic.description }} />
                 <span>Published at {comic.published}</span>
-                <Button variant="filled">Add to cart</Button>
+                <Button
+                  variant="filled"
+                  onClick={() => handleAddItemToCart(comic)}
+                >
+                  Add to cart
+                </Button>
               </Description>
             </Container>
           </Background>

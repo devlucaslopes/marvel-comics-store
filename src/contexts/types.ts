@@ -3,6 +3,9 @@ export type CartContextData = {
   news: ComicData[]
   bestSellers: ComicData[]
   favorites: ComicData[]
+  isLoading: boolean
+  items: ComicData[]
+  handleAddItemToCart: (item: ComicData) => void
 }
 
 export type CartProviderProps = {

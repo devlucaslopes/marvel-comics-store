@@ -1,5 +1,7 @@
 import { FiX } from 'react-icons/fi'
 
+import { useCart } from '../../hooks/useCart'
+
 import {
   Container,
   Wrapper,
@@ -14,49 +16,40 @@ type CartProps = {
   onClose: () => void
 }
 
-export const Cart = ({ onClose }: CartProps) => (
-  <Wrapper>
-    <Container>
-      <Header>
-        <h4>My Cart</h4>
+export const Cart = ({ onClose }: CartProps) => {
+  const { items } = useCart()
 
-        <button onClick={onClose}>
-          <FiX size={24} />
-        </button>
-      </Header>
+  return (
+    <Wrapper>
+      <Container>
+        <Header>
+          <h4>My Cart</h4>
 
-      <CartList>
-        <CartItem>
-          <img
-            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-            alt="Product"
-          />
+          <button onClick={onClose}>
+            <FiX size={24} />
+          </button>
+        </Header>
 
-          <div>
-            <strong>X-Men Unlimited: Latitude (2022) #1</strong>
-            <span>$ 8.00</span>
-          </div>
-        </CartItem>
+        <CartList>
+          {items.map((item) => (
+            <CartItem key={item.id} isRare={item.isRare}>
+              <img src={item.cover} alt={item.title} />
 
-        <CartItem isRare>
-          <img
-            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-            alt="Product"
-          />
+              <div>
+                <strong>{item.title}</strong>
+                <span>$ 8.00</span>
+              </div>
+            </CartItem>
+          ))}
+        </CartList>
 
-          <div>
-            <strong>X-Men Unlimited: Latitude (2022) #1</strong>
-            <span>$ 8.00</span>
-          </div>
-        </CartItem>
-      </CartList>
+        <FormDiscount>
+          <h4>Discount code</h4>
+          <input type="text" placeholder="example#10" />
+        </FormDiscount>
 
-      <FormDiscount>
-        <h4>Discount code</h4>
-        <input type="text" placeholder="example#10" />
-      </FormDiscount>
-
-      <Checkout>Checkout</Checkout>
-    </Container>
-  </Wrapper>
-)
+        <Checkout>Checkout</Checkout>
+      </Container>
+    </Wrapper>
+  )
+}
