@@ -37,6 +37,7 @@ const CartProvider = ({ children }: CartProviderProps) => {
 
   const handleAddItemToCart = (item: ComicData) => {
     setItems([...items, item])
+    setCartIsOpen(true)
   }
 
   const handleOpenCart = () => {
