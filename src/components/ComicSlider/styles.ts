@@ -30,7 +30,7 @@ export const ComicItem = styled.div<ComicItemProps>`
     img {
       width: 100%;
       height: 100%;
-      min-height: 18rem;
+      height: 18rem;
       object-fit: cover;
       border: ${isRare ? `2px solid ${theme.colors.highlight}` : 'none'};
     }

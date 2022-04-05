@@ -6,11 +6,14 @@ import { theme } from './styles/theme'
 import { GlobalStyles } from './styles/global'
 
 import App from './App'
+import { CartProvider } from './contexts/CartContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
       <GlobalStyles />
     </ThemeProvider>
   </React.StrictMode>,
