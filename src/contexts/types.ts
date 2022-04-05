@@ -17,4 +17,5 @@ export type ComicData = {
   cover: string
   isRare: boolean
   creators: string
+  published: string
 }

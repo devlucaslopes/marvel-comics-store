@@ -8,6 +8,11 @@ type ComicOriginalData = {
       extension: string
     }
   ]
+  dates: [
+    {
+      date: string
+    }
+  ]
   creators: { items: [{ name: string }] }
 }
 
@@ -28,6 +33,10 @@ export const comicsFormatter = (comics: ComicOriginalData[]) => {
       creators = item.creators.items.map((creator) => creator.name).join(', ')
     }
 
+    const published = new Intl.DateTimeFormat('en-US', {
+      dateStyle: 'full'
+    }).format(new Date(item.dates[0].date))
+
     return {
       id: item.id,
       title: item.title,
@@ -35,6 +44,7 @@ export const comicsFormatter = (comics: ComicOriginalData[]) => {
       slug,
       cover,
       creators,
+      published,
       isRare: index < rarityRate
     }
   })
