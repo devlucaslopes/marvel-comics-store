@@ -17,8 +17,6 @@ const CartProvider = ({ children }: CartProviderProps) => {
       const results = data.data.results
       const comicsFormatted = comicsFormatter(results)
 
-      console.log('comicsFormatted', comicsFormatted)
-
       setComics(comicsFormatted)
       setNews(comicsFormatted.slice(0, 5))
       setBestSellers(comicsFormatted.slice(5, 10))
