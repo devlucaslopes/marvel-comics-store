@@ -15,6 +15,8 @@
 
 Esse projeto foi desenvolvido durante algumas lives onde mostrei todo o processo do <strong>design</strong> ao <strong>código</strong>.
 
+Todo processo de criação foi realizado no <a href="https://www.figma.com/file/NiFf68ZE7SU9hxpzzyBkC7/Marvel-Comics-Store?node-id=27%3A129">Figma</a>.
+
 ## 🚀 Tecnologias
 
 ---
