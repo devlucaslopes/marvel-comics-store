@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     .swiper-pagination {
       position: absolute;
       bottom: ${theme.spacings.large};
-      z-index: ${theme.layers.alwaysOnTop};
+      z-index: ${theme.layers.onTop};
 
       width: 100%;
       display: flex;

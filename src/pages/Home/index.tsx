@@ -1,5 +1,6 @@
 import { Banners } from '../../components/Banners'
 import { ComicSection } from '../../components/ComicSection'
+import { Loader } from '../../components/Loader'
 import { useCart } from '../../hooks/useCart'
 
 export const Home = () => {
@@ -7,6 +8,7 @@ export const Home = () => {
 
   return (
     <>
+      <Loader />
       <Banners />
       <ComicSection title="Novidades" comics={news} />
       <ComicSection title="Mais vendidos" comics={bestSellers} />

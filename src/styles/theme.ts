@@ -47,7 +47,8 @@ export const theme = {
   layers: {
     overlay: -1,
     base: 1,
-    alwaysOnTop: 2
+    onTop: 2,
+    alwaysOnTop: 3
   },
   menuHeight: '8rem'
 } as const

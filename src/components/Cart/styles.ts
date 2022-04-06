@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     right: 0;
     background: rgba(32, 32, 32, 0.7);
     backdrop-filter: blur(6px);
-    z-index: ${theme.layers.alwaysOnTop};
+    z-index: ${theme.layers.onTop};
 
     animation: ${fadeIn} 0.3s ease-in-out forwards;
   `}
