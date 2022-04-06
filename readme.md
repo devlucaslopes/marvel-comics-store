@@ -11,7 +11,7 @@
 
 ---
 
-<a href="https://chihiro-bolado.vercel.app/" target="_blank">Versão online</a>
+<a href="https://marvel-comics-store.vercel.app/" target="_blank">Versão online</a>
 
 Esse projeto foi desenvolvido durante algumas lives onde mostrei todo o processo do <strong>design</strong> ao <strong>código</strong>.
 
