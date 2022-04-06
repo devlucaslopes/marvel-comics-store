@@ -9,10 +9,10 @@ import { Wrapper } from './styles'
 type ComicSectionProps = {
   title: string
   comics: ComicData[]
-}
+} & React.HTMLAttributes<HTMLDivElement>
 
-export const ComicSection = ({ title, comics }: ComicSectionProps) => (
-  <Wrapper>
+export const ComicSection = ({ title, comics, ...rest }: ComicSectionProps) => (
+  <Wrapper {...rest}>
     <Container>
       <Heading>{title}</Heading>
 

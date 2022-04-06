@@ -19,13 +19,13 @@ export const Header = () => {
         <Navigation>
           <NavLinks>
             <li>
-              <a href="#">Novidades</a>
+              <a href="#news">Novidades</a>
             </li>
             <li>
-              <a href="#">Mais vendidos</a>
+              <a href="#best-sellers">Mais vendidos</a>
             </li>
             <li>
-              <a href="#">Queridinhos da galera</a>
+              <a href="#favorites">Queridinhos da galera</a>
             </li>
           </NavLinks>
 

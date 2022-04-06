@@ -10,9 +10,17 @@ export const Home = () => {
     <>
       <Loader />
       <Banners />
-      <ComicSection title="Novidades" comics={news} />
-      <ComicSection title="Mais vendidos" comics={bestSellers} />
-      <ComicSection title="Queridinhos da galera" comics={favorites} />
+      <ComicSection title="Novidades" comics={news} id="news" />
+      <ComicSection
+        title="Mais vendidos"
+        comics={bestSellers}
+        id="best-sellers"
+      />
+      <ComicSection
+        title="Queridinhos da galera"
+        comics={favorites}
+        id="favorites"
+      />
     </>
   )
 }
