@@ -44,6 +44,14 @@ export const NavLinks = styled.ul`
     display: flex;
     gap: ${theme.spacings.medium};
 
+    a {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: ${theme.colors.secondary['400']};
+      }
+    }
+
     ${media.lessThan('large')`
         display: none;
     `}
