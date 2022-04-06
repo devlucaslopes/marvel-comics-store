@@ -80,6 +80,13 @@ export const Header = styled.div`
   `}
 `
 
+export const EmptyCart = styled.p`
+  ${({ theme }) => css`
+    text-align: center;
+    padding: ${theme.spacings.medium} ${theme.spacings.large};
+  `}
+`
+
 export const CartList = styled.ul`
   ${({ theme }) => css`
     display: flex;
@@ -122,6 +129,12 @@ export const Checkout = styled.button`
     background-color: ${theme.colors.secondary['400']};
     color: ${theme.colors.white};
     text-transform: uppercase;
+
+    &:disabled {
+      background-color: ${theme.colors.primary['100']};
+      color: ${theme.colors.primary['200']};
+      cursor: not-allowed;
+    }
   `}
 `
 

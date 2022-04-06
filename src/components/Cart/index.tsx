@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { FiX } from 'react-icons/fi'
 
 import { useCart } from '../../hooks/useCart'
@@ -9,11 +10,15 @@ import {
   CartList,
   CartItem,
   Checkout,
-  FormDiscount
+  FormDiscount,
+  EmptyCart
 } from './styles'
 
 export const Cart = () => {
   const { items, handleOpenCart } = useCart()
+
+  // TODO: Refatorar
+  const hasItems = !!items.length
 
   return (
     <Wrapper>
@@ -26,25 +31,33 @@ export const Cart = () => {
           </button>
         </Header>
 
-        <CartList>
-          {items.map((item) => (
-            <CartItem key={item.id} isRare={item.isRare}>
-              <img src={item.cover} alt={item.title} />
+        {!hasItems && (
+          <EmptyCart>Nenhum item foi adicionado ao carrinho.</EmptyCart>
+        )}
 
-              <div>
-                <strong>{item.title}</strong>
-                <span>$ 8.00</span>
-              </div>
-            </CartItem>
-          ))}
-        </CartList>
+        {hasItems && (
+          <>
+            <CartList>
+              {items.map((item) => (
+                <CartItem key={item.id} isRare={item.isRare}>
+                  <img src={item.cover} alt={item.title} />
 
-        <FormDiscount>
-          <h4>Discount code</h4>
-          <input type="text" placeholder="example#10" />
-        </FormDiscount>
+                  <div>
+                    <strong>{item.title}</strong>
+                    <span>$ 8.00</span>
+                  </div>
+                </CartItem>
+              ))}
+            </CartList>
 
-        <Checkout>Checkout</Checkout>
+            <FormDiscount>
+              <h4>Discount code</h4>
+              <input type="text" placeholder="example#10" />
+            </FormDiscount>
+          </>
+        )}
+
+        <Checkout disabled={!hasItems}>Checkout</Checkout>
       </Container>
     </Wrapper>
   )
