@@ -34,7 +34,7 @@ const fadeOut = keyframes`
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;

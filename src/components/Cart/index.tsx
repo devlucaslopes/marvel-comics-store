@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { FiX } from 'react-icons/fi'
 
 import { useCart } from '../../hooks/useCart'
@@ -31,11 +30,7 @@ export const Cart = () => {
           </button>
         </Header>
 
-        {!hasItems && (
-          <EmptyCart>Nenhum item foi adicionado ao carrinho.</EmptyCart>
-        )}
-
-        {hasItems && (
+        {hasItems ? (
           <>
             <CartList>
               {items.map((item) => (
@@ -55,6 +50,8 @@ export const Cart = () => {
               <input type="text" placeholder="example#10" />
             </FormDiscount>
           </>
+        ) : (
+          <EmptyCart>Nenhum item foi adicionado ao carrinho.</EmptyCart>
         )}
 
         <Checkout disabled={!hasItems}>Checkout</Checkout>
